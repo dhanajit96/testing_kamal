@@ -8,7 +8,7 @@ module Api
         rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
         rescue_from ActionController::ParameterMissing, with: :bad_request
         rescue_from ActiveRecord::RecordInvalid, with: :unprocessable_entity
-        rescue_from CanCan::AccessDenied, with: :unauthorized
+        # rescue_from CanCan::AccessDenied, with: :unauthorized
 
 
         def authenticate_user!
